@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center><h1 id="titulo">alterar a img</h1>
+    <button onclick="mudarcor()">clique para mudar img</button></center>
+    <script>
+        const cores = ['url(messi.png)','url(download.webp)'];
+        let indiceCor = 0;
+        function mudarcor(){
+            document.body.style.backgroundImage = cores[indiceCor];
+            document.body.style.backgroundRepeat = 'no-repeat';
+            indiceCor = (indiceCor + 1) % cores.length;
+        }
+    </script>
+</body>
+</html>
